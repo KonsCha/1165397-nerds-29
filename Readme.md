@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Konstantin Chapaev](https://up.htmlacademy.ru/htmlcss/29/user/1165397).
-* Наставник: `Неизвестно`.
+* Наставник: [Ярослав Шевцов].(https://htmlacademy.ru/profile/redx)
 
 ---
 
