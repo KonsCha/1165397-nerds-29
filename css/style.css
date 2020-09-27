@@ -1,0 +1,123 @@
+@font-face {
+  font-family:"Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), url("/fonts/roboto.woff2") format("woff2"), url("/fonts/roboto.woff") format("woff");
+}
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --light-grey: #EEEEEE;
+  --light-red:#FB565A;
+  --red:#E74246;
+  --extra-red:#D7373B;
+  --light-green:#00CA74;
+  --green:#00BC6C;
+  --extra-green:#00AA62;
+  --light-yellow:#EFC84A;
+  --yellow:#EAB534;
+  --extra-yellow:#E5A722;
+  --font-green:#01A25E;
+  --font-color:#283136;
+  --font-color-dark:#321F20;
+  --font-color-extra:#666666;
+  --basket-color: #A6A6A6;
+  --extra-grey:#e1e1e1;
+  --btn-color:#DFDFDF;
+  --btn-extra-color:#D5D5D5;
+  --nav-color:#4D4D4D;
+  --bottom-font-grey:#444444;
+}
+
+body{
+  font-family:"Roboto";
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color:var(--font-color);
+  background-color: var(--basic-white);
+}
+.main-header {
+  background-color: var(--light-grey);
+}
+.site-navigation {
+  color:var(--basic-black);
+  font-weight: 500px;
+  line-height: 30px;
+}
+.basket {
+  color:var(--basic-black);
+  font-weight: 500px;
+  line-height: 30px;
+}
+.preview .loud-phrase {
+  color:var(--basic-black);
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+.button-about-us {
+  color: var(--basic-white);
+  line-height: 18px;
+  font-weight: 500;
+}
+.services h3 {
+  color:var(--basic-black);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.services .booking-button {
+  color: var(--basic-white);
+  line-height: 18px;
+  font-weight: 500;
+}
+.about .second-loud-phrase {
+  color:var(--basic-black);
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
+.about .list {
+  font-weight: 700;
+}
+.about .second-list {
+  color:var(--basic-black);
+}
+.about-list2 {
+  font-size: 16px;
+  line-height: 18px;
+}
+.about-list2 .number {
+  color:var(--basic-black);
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+}
+.contacts h3 {
+  color:var(--basic-black);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+.contacts p {
+  color:var(--font-color-extra);
+  line-height: 18px;
+}
+.button-contact-us {
+  color: var(--basic-white);
+  line-height: 18px;
+  font-weight: 500;
+}
+.bottom-footer {
+  color: var(--bottom-font-grey);
+  line-height: 22px;
+}
+.bottom-footer .first-p {
+  color: var(--basic-black);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+}
