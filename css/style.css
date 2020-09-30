@@ -1,9 +1,23 @@
+/* Roboto-regular */
 @font-face {
   font-family:"Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/roboto.woff2") format("woff2"), url("/fonts/roboto.woff") format("woff"), url("/fonts/robotobold.woff2") format("woff2"),
-   url("/fonts/robotobold.woff") format("woff"), url("/fonts/robotomedium.woff2") format("woff2"), url("/fonts/robotomedium.woff") format("woff");
+  src: url("/fonts/roboto.woff2") format("woff2"), url("/fonts/roboto.woff") format("woff");
+}
+/* Roboto-medium */
+@font-face {
+  font-family:"Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/robotomedium.woff2") format("woff2"), url("/fonts/robotomedium.woff") format("woff");
+}
+/* Roboto-bold */
+@font-face {
+  font-family:"Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/robotobold.woff2") format("woff2"), url("/fonts/robotobold.woff") format("woff");
 }
 
 :root {
