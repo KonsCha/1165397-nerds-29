@@ -1,23 +1,28 @@
 /* Roboto-regular */
+
 @font-face {
   font-family:"Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/roboto.woff2") format("woff2"), url("/fonts/roboto.woff") format("woff");
+  src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
 }
+
 /* Roboto-medium */
+
 @font-face {
   font-family:"Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/robotomedium.woff2") format("woff2"), url("/fonts/robotomedium.woff") format("woff");
+  src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
 }
+
 /* Roboto-bold */
+
 @font-face {
   font-family:"Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/robotobold.woff2") format("woff2"), url("/fonts/robotobold.woff") format("woff");
+  src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff");
 }
 
 :root {
@@ -45,9 +50,12 @@
   --bottom-font-grey:#444444;
 }
 
-/* Main */
+/* Global */
 
 body{
+  min-width: 1440px;
+  margin: 0;
+  padding: 0;
   font-family:"Roboto", "Arial", sans-serif;
   font-style: normal;
   font-size: 16px;
@@ -56,29 +64,92 @@ body{
   color:var(--font-color);
   background-color: var(--basic-white);
 }
+
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  
+}
+
+/* Main */
+
 .main-header {
   background-color: var(--light-grey);
+  margin-bottom: 70px;
 }
+
+.main-navigation {
+  display: flex;
+  justify-content: space-around;
+  
+}
+.header-logo {
+ 
+}
+
+.main-navigation-wrapper {
+  
+}
+
 .site-navigation {
   color:var(--basic-black);
   font-weight: 500px;
   line-height: 30px;
+  display: flex;
+}
+.site-navigation li {
+  margin-left: 45px;
+
 }
 .basket {
   color:var(--basic-black);
   font-weight: 500px;
-  line-height: 30px;
+  line-height: 30px;  
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container h1 {
+  display: none;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+
+}
+
 .preview .loud-phrase {
   color:var(--basic-black);
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
 }
+
+.slider {
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
 .button-about-us {
   color: var(--basic-white);
   line-height: 18px;
   font-weight: 500;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-around;
 }
 .services h3 {
   color:var(--basic-black);
@@ -86,52 +157,101 @@ body{
   font-weight: 700;
   line-height: 30px;
 }
+.services h2 {
+  display: none;
+}
+
 .services .booking-button {
   color: var(--basic-white);
   line-height: 18px;
   font-weight: 500;
 }
+.about {
+  display: flex;
+  justify-content:space-around;
+}
+
+.about h2 {
+  display: none;
+}
+.about-part1 {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+.about-part2 {
+  display: flex;
+  flex-direction: column;
+}
+
 .about .second-loud-phrase {
   color:var(--basic-black);
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
 }
+
 .about .list {
   font-weight: 700;
 }
+
 .about .second-list {
   color:var(--basic-black);
 }
+
 .about-list2 {
   font-size: 16px;
   line-height: 18px;
+  display: flex;
 }
+
 .about-list2 .number {
   color:var(--basic-black);
   font-weight: 700;
   font-size: 45px;
   line-height: 64px;
 }
+
+.companies h2 {
+  display: none;
+}
+.companies-logo {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 126px;
+  margin-top: 121px;
+
+}
+
+/*Main footer*/
+
+.main-footer {
+  
+}
+
 .contacts h3 {
   color:var(--basic-black);
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
 }
+
 .contacts p {
   color:var(--font-color-extra);
   line-height: 18px;
 }
+
 .button-contact-us {
   color: var(--basic-white);
   line-height: 18px;
   font-weight: 500;
 }
+
 .bottom-footer {
   color: var(--bottom-font-grey);
   line-height: 22px;
 }
+
 .bottom-footer .first-p {
   color: var(--basic-black);
   font-weight: 700;
@@ -147,42 +267,49 @@ body{
   font-size: 16px;
   line-height: 22px;
 }
+
 .content-catalog {
   color: var(--basic-black);
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
 }
+
 .price, .grid, .sort, .features, .sedona {
   color: var(--basic-black);
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
 }
+
 .wrapper {
   color: var(--font-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 }
+
 .catalog-button {
   color: var(--basic-black);
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
 }
+
 .sort-wrapper {
   color: var(--basic-black);
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
 }
+
 .inf-site {
   color: var(--font-color-extra);
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
 }
+
 .sedona-button {
   color: var(--basic-white);
   font-weight: 500;
