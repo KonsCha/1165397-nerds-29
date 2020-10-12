@@ -52,10 +52,7 @@
 
 /* Global */
 
-body{
-  min-width: 1440px;
-  margin: 0;
-  padding: 0;
+body {
   font-family:"Roboto", "Arial", sans-serif;
   font-style: normal;
   font-size: 16px;
@@ -63,6 +60,10 @@ body{
   line-height: 24px;
   color:var(--font-color);
   background-color: var(--basic-white);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
 /* Grid */
@@ -73,50 +74,54 @@ body{
 
 .page-body {
   min-height: 100%;
-  
+}
+
+/* Container */
+
+.container {
+  padding: 0 140px;
 }
 
 /* Main */
 
 .main-header {
   background-color: var(--light-grey);
-  margin-bottom: 70px;
 }
 
 .main-navigation {
   display: flex;
-  justify-content: space-around;
-  
-}
-.header-logo {
- 
+  justify-content: space-between;
 }
 
-.main-navigation-wrapper {
-  
+.header-logo {
+  margin-top: 49px;
 }
 
 .site-navigation {
   color:var(--basic-black);
   font-weight: 500px;
   line-height: 30px;
+  list-style-type: none;
+  text-transform: uppercase;
   display: flex;
+  align-items: flex-end;
 }
+
 .site-navigation li {
   margin-left: 45px;
-
 }
+
 .basket {
   color:var(--basic-black);
   font-weight: 500px;
-  line-height: 30px;  
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-top: 75px;
 }
-.container {
+
+.about-us {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .container h1 {
@@ -124,9 +129,7 @@ body{
 }
 
 .preview {
-  display: flex;
-  flex-direction: column;
-
+  margin-top: 30px;
 }
 
 .preview .loud-phrase {
@@ -137,38 +140,38 @@ body{
 }
 
 .slider {
-  margin-top: -50px;
-  margin-bottom: 50px;
+  
 }
 
-.button-about-us {
+.button {
   color: var(--basic-white);
-  line-height: 18px;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .services-list {
+  list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-right: 200px;
+  margin-left: 100px;
 }
 .services h3 {
   color:var(--basic-black);
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
+  text-transform: uppercase;
 }
 .services h2 {
   display: none;
 }
 
-.services .booking-button {
-  color: var(--basic-white);
-  line-height: 18px;
-  font-weight: 500;
-}
 .about {
   display: flex;
-  justify-content:space-around;
+  justify-content:space-between;
 }
 
 .about h2 {
@@ -177,11 +180,12 @@ body{
 .about-part1 {
   display: flex;
   flex-direction: column;
-  float: left;
+  margin-top: 110px;
 }
 .about-part2 {
   display: flex;
   flex-direction: column;
+  margin-top: 121px;
 }
 
 .about .second-loud-phrase {
@@ -193,16 +197,22 @@ body{
 
 .about .list {
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .about .second-list {
   color:var(--basic-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .about-list2 {
   font-size: 16px;
   line-height: 18px;
   display: flex;
+  margin-top: -30px;
 }
 
 .about-list2 .number {
@@ -215,18 +225,30 @@ body{
 .companies h2 {
   display: none;
 }
+
 .companies-logo {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 126px;
-  margin-top: 121px;
-
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 121px 183px 126px 172px;
 }
 
 /*Main footer*/
 
 .main-footer {
   
+}
+
+.contacts {
+  display: none;
+}
+
+.little-logo {
+  display: none;
+}
+
+.map {
+  margin: auto;
 }
 
 .contacts h3 {
@@ -241,15 +263,23 @@ body{
   line-height: 18px;
 }
 
-.button-contact-us {
-  color: var(--basic-white);
-  line-height: 18px;
-  font-weight: 500;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list {
+  display: flex;
+  margin-left: 140px;
+  margin-top: 65px;
 }
 
 .bottom-footer {
   color: var(--bottom-font-grey);
   line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 440px;
 }
 
 .bottom-footer .first-p {
@@ -257,6 +287,11 @@ body{
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+}
+
+.second-p {
+  margin-top: -30px;
+  margin-bottom: 70px;
 }
 
 /* For catalog */
@@ -273,6 +308,20 @@ body{
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
+  text-align: center;
+}
+
+.catalog-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.sort-wrapper {
+  display: flex;
 }
 
 .price, .grid, .sort, .features, .sedona {
@@ -289,13 +338,6 @@ body{
   line-height: 19px;
 }
 
-.catalog-button {
-  color: var(--basic-black);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-}
-
 .sort-wrapper {
   color: var(--basic-black);
   font-weight: 400;
@@ -310,9 +352,6 @@ body{
   line-height: 18px;
 }
 
-.sedona-button {
-  color: var(--basic-white);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+a {
+  text-decoration: none;
 }
