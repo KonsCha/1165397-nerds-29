@@ -79,7 +79,9 @@ body {
 /* Container */
 
 .container {
-  padding: 0 140px;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 /* Main */
@@ -155,8 +157,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
-  margin-right: 200px;
-  margin-left: 100px;
 }
 .services h3 {
   color:var(--basic-black);
