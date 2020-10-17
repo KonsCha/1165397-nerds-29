@@ -66,6 +66,11 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
 /* Grid */
 
 .page {
@@ -79,7 +84,7 @@ body {
 /* Container */
 
 .container {
-  width: 1440px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -90,6 +95,8 @@ body {
   background-color: var(--light-grey);
 }
 
+/* Navigation*/
+
 .main-navigation {
   display: flex;
   justify-content: space-between;
@@ -98,10 +105,14 @@ body {
 .header-logo {
   margin-top: 49px;
 }
+/*?*/
+.header-logo:active {
+
+}
 
 .site-navigation {
   color:var(--basic-black);
-  font-weight: 500px;
+  font-weight: 500;
   line-height: 30px;
   list-style-type: none;
   text-transform: uppercase;
@@ -109,17 +120,49 @@ body {
   align-items: flex-end;
 }
 
-.site-navigation li {
-  margin-left: 45px;
+.site-navigation a:link {
+  color:var(--basic-black);
 }
+
+.main-navigation a:hover {
+  color: var(--light-red);
+}
+
+.main-navigation a:active {
+  opacity: 0.3;
+}
+
+.main-navigation a:visited {
+
+}
+
+.site-navigation a {
+  display: block;
+  padding: 0 23px;
+}
+
+/*Login Link */
 
 .basket {
   color:var(--basic-black);
-  font-weight: 500px;
+  font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
   margin-top: 75px;
+  position: relative;
 }
+.basket::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 6px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 
 .about-us {
   display: flex;
@@ -145,12 +188,80 @@ body {
   
 }
 
+/* Buttons*/
+
 .button {
-  color: var(--basic-black);
+  color: var(--basic-white);
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--light-red);
+  border-radius: 3px;
 }
+
+.button.book {
+  padding: 16px 54px;
+  position: relative;
+  top:35px;
+}
+
+.button.book:hover {
+  background-color: var(--red);
+}
+/* ? */
+.button.book:active {
+  background-color: var(--extra-red);
+  
+}
+
+.button.red {
+  padding: 16px 40px;
+}
+
+.button.red:hover {
+  background-color: var(--red);
+}
+
+/* ? */
+.button.red:active {
+  background-color: var(--extra-red);
+  
+}
+
+.button.green {
+  padding: 16px 40px;
+  background-color: var(--light-green);
+}
+
+.button.green:hover {
+  background-color: var(--green);
+}
+
+.button.green:active {
+  background-color: var(--extra-green);
+}
+
+.button.yellow {
+  padding: 16px 40px;
+  background-color: var(--light-yellow);
+}
+
+.button.yellow:hover {
+  background-color: var(--yellow);
+}
+
+.button.yellow:active {
+  background-color: var(--extra-yellow);
+}
+
+.button.red, .button.yellow, .button.green {
+  position: relative;
+  top:30px;
+}
+
+/*Services */
 
 .services-list {
   list-style-type: none;
@@ -222,6 +333,8 @@ body {
   line-height: 64px;
 }
 
+/*Companies*/
+
 .companies h2 {
   display: none;
 }
@@ -231,6 +344,10 @@ body {
   justify-content: space-between;
   align-items: baseline;
   margin: 121px 183px 126px 172px;
+}
+/* не понимаю как увеличить прозрачность или нужно загрузить новые картинки? но как? */
+.companies-logo:hover {
+  opacity: 0.9;
 }
 
 /*Main footer*/
@@ -374,8 +491,4 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-}
-
-a {
-  text-decoration: none;
 }
