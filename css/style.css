@@ -48,6 +48,7 @@
   --btn-extra-color:#D5D5D5;
   --nav-color:#4D4D4D;
   --bottom-font-grey:#444444;
+  --triangle-black:#321F20;
 }
 
 /* Global */
@@ -172,9 +173,10 @@ a {
 .about-us {
   display: flex;
   justify-content: space-between;
+  background-color: var(--light-grey);
 }
 
-.container h1 {
+.about-us h1 {
   display: none;
 }
 
@@ -256,19 +258,23 @@ a {
   border-radius: 3px;
 }
 
-.button.book {
+.button {
   padding: 16px 54px;
   position: relative;
   top:35px;
 }
 
-.button.book:hover {
+.button:hover {
   background-color: var(--red);
+}
+
+.button:active {
+  background-color: var(--extra-red);
 }
 
 .button.book:active {
   background-color: var(--extra-red);
-  color: rgba(250, 250, 250, 0.3)
+  color: rgba(250, 250, 250, 0.3);
 }
 
 .button.red {
@@ -281,7 +287,7 @@ a {
 
 .button.red:active {
   background-color: var(--extra-red);
-  color: rgba(250, 250, 250, 0.3)
+  color: rgba(250, 250, 250, 0.3);
 }
 
 .button.green {
@@ -295,7 +301,7 @@ a {
 
 .button.green:active {
   background-color: var(--extra-green);
-  color: rgba(250, 250, 250, 0.3)
+  color: rgba(250, 250, 250, 0.3);
 }
 
 .button.yellow {
@@ -309,7 +315,7 @@ a {
 
 .button.yellow:active {
   background-color: var(--extra-yellow);
-  color: rgba(250, 250, 250, 0.3)
+  color: rgba(250, 250, 250, 0.3);
 }
 
 .button.red, .button.yellow, .button.green {
@@ -318,6 +324,50 @@ a {
 }
 .button.write-us {
   
+}
+
+.button.show-us {
+  color: var(--basic-black);
+  background-color: var(--light-grey);
+  padding: 17px 89px 15px 88px;
+}
+
+.button.show-us:hover {
+  background-color: var(--btn-color);
+}
+
+.button.show-us:active {
+  background-color: var(--btn-extra-color);
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.pagination.button {
+  padding: 17px 15px 15px 20px;
+  background-color: var(--light-grey);
+  color: var(--basic-black);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  margin-right: 11px;
+}
+
+.pagination.button.next {
+  padding: 17px 77px 15px 78px;
+}
+
+.pagination.button:hover {
+  background-color: var(--btn-color);
+}
+
+.pagination.button:active {
+  background-color: var(--btn-extra-color);
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 /*Services */
@@ -579,6 +629,7 @@ a {
   font-size: 55px;
   line-height: 55px;
   text-align: center;
+  padding-bottom: 108px;
 }
 
 .catalog-wrapper {
@@ -586,43 +637,14 @@ a {
   justify-content: space-between;
 }
 
-.price-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-.sort-wrapper {
-  display: flex;
-}
+/* Basic catalog */
 
-.aside-check {
-  
-}
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.image-stand {
-  display: grid;
-  grid-template-columns:min-content min-content ;
-  justify-content: center;
-  align-content: start;
-  column-gap: 42px;
-  row-gap: 30px;
-  margin-top: -500px;
-  margin-right: -500px;
-}
-
-.pagination {
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-}
-.price, .grid, .sort, .features, .sedona {
+.price, .grid, .sort, .features, .brand-name, .filter-item legend {
   color: var(--basic-black);
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .wrapper {
@@ -630,6 +652,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  padding: 0;
 }
 
 .sort-wrapper {
@@ -644,4 +667,345 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+}
+
+
+/* Filter */
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+.filter-item {
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  height: 80px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.price-controls input {
+  width: 80px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Sort */
+
+.sort-wrapper {
+  display: flex;
+  list-style: none;
+  color: var(--basic-black);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort-wrapper li {
+  margin-left: 25px;
+  opacity: 0.3;
+}
+
+.sort-wrapper li:hover {
+  opacity: 0.6;
+}
+
+.sort-wrapper li:active {
+  opacity: 1;
+}
+
+.sort-wrapper:last-child::after {
+  content: "";
+  position: relative;
+  right: -47px;
+  top: 3px;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/Shape.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.2;
+}
+.sort-wrapper:last-child::before {
+  content: "";
+  position: relative;
+  right: -380px;
+  top: 3px;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/Shape.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
+
+.sort-wrapper:last-child:hover::before {
+  opacity: 1;
+}
+
+.sort-wrapper:last-child:hover::after {
+  opacity: 1;
+}
+
+/* не меняет цвет для треугольников при нажатие?? */
+
+.sort-wrapper:last-child:active::before {
+  fill: #231f20;
+  }
+
+.sort-wrapper:last-child:active::after {
+  fill:#231f20
+}
+
+.aside-check {
+  
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+/* Image */
+
+.image-stand {
+  display: grid;
+  grid-template-columns:min-content min-content ;
+  justify-content: center;
+  align-content: start;
+  column-gap: 42px;
+  row-gap: 30px;
+  margin-top: -400px;
+  margin-right: -500px;
+  list-style: none;
+  z-index: 5;
+}
+
+.image-stand li::before {
+  width: 360px;
+  height: 40px;
+  content: '';
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url(../img/browser.svg);
+  position: absolute;
+  opacity: 0.12;
+}
+
+.image-stand li:hover::before {
+  opacity: 1;
+}
+
+
+.description {
+  text-align: center;
+  background-color: var(--light-grey);
+  padding: 26px 96px 44px 97px;
+  z-index: 10;
+  position: relative;
+  top:-240px;
+  display: inline-block;
+}
+/* ????сотояние наведения и появления описания */
+
+.description:hover {
+  
+}
+
+.brand-name:hover {
+  color:var(--light-red)
+}
+
+.brand-name:active {
+  opacity: 0.3;
+}
+
+.pagination {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+/* Radio buttons */
+
+.wrapper.radio li {
+  margin-bottom: 21px;
+}
+.option {
+  display: block;
+}
+
+.check {
+  padding-left: 38px;
+}
+
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.radio__box {
+  position: absolute;
+  margin-left: -38px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/radio-off.svg);
+  opacity: 0.4;
+}
+
+/* Checked */
+
+.check__input:checked + .radio__box {
+  background-image: url(../img/radio-on.svg);
+  opacity: 0.4;
+}
+
+/* Hovered */
+
+.check__input:hover + .radio__box {
+  background-image: url(../img/radio-off.svg);
+  opacity: 1;
+
+}
+
+.check__input:checked:hover + .radio__box {
+  background-image: url(../img/radio-on.svg);
+  opacity: 1;
+}
+
+/* Disabled */
+
+.check__input:disabled + .radio__box {
+  background-image: url(../img/radio-off.svg);
+  opacity: 0.3;
+}
+
+.check__input:checked:disabled + .radio__box {
+  background-image: url(../img/radio-on.svg);
+  opacity: 0.3;
+}
+
+
+/* Checkbox */
+
+.wrapper.checkbox li {
+  margin-bottom: 21px;
+}
+.option {
+  display: block;
+}
+
+.check {
+  padding-left: 38px;
+}
+
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.check__box {
+  position: absolute;
+  margin-left: -38px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  opacity: 0.4;
+}
+/* Checked */
+
+.check__input:checked + .check__box {
+  background-image: url(../img/checkbox-on.svg);
+  opacity: 0.4;
+}
+
+/* Hovered */
+
+.check__input:hover + .check__box {
+  background-image: url(../img/checkbox-off.svg);
+  opacity: 1;
+
+}
+
+.check__input:checked:hover + .check__box {
+  background-image: url(../img/checkbox-on.svg);
+  opacity: 1;
+}
+
+/* Disabled */
+
+.check__input:disabled + .check__box {
+  background-image: url(../img/checkbox-off.svg);
+  opacity: 0.3;
+}
+
+.check__input:checked:disabled + .check__box {
+  background-image: url(../img/checkbox-on.svg);
+  opacity: 0.3;
 }
