@@ -28,7 +28,7 @@
 			<h1 class="content-catalog">Магазин готовых шаблонов.</h1>
     </header>
     <main class="container-catalog container">
-			<div class="catalog-wrapper">
+			<div class="catalog-filter">
 				<form method="get" action="https://echo.htmlacademy.ru">
 					<fieldset class="filter-item">
 							<legend>Стоимость:</legend>
@@ -51,97 +51,119 @@
 							</div>
 					</fieldset>
 				</form>
-				<p class="sort">сортировать:</p>
-				<ul class="sort-wrapper">
-					<li>по цене</li>
-					<li>по типу</li>
-					<li>по названию</li>
-				</ul>
+				<div class="aside-check">
+					<p class="grid">сетка:</p>
+					<ul class="wrapper radio">
+						<li><label class="check option">
+							<input class="check__input" type="radio" name="answer" value="adapt" checked>
+							<span class="radio__box"></span>
+							Адаптивная</label></li>
+						<li><label class="check option">
+							<input class="check__input" type="radio" name="answer" value="fiks">
+							<span class="radio__box"></span>
+							Фиксированная</label></li>
+						<li><label class="check option">
+							<input class="check__input" type="radio" name="answer" value="rubber">
+							<span class="radio__box"></span>
+							Резиновая</label></li>
+					</ul>
+					<p class="features">особенности:</p>
+					<ul class="wrapper checkbox">
+						<li><label class="check option">
+							<input class="check__input" type="checkbox" checked>
+							<span class="check__box"></span>
+							Слайдер</label></li>
+						<li><label class="check option">
+							<input class="check__input" type="checkbox">
+							<span class="check__box"></span>
+							Блок преимуществ</label></li>
+						<li><label class="check option">
+							<input class="check__input" type="checkbox" checked>
+							<span class="check__box"></span>
+							Новости</label></li>
+						<li><label class="check option">
+							<input class="check__input" type="checkbox">
+							<span class="check__box"></span>
+							Галерея</label></li>
+						<li><label class="check option">
+							<input class="check__input" type="checkbox">
+							<span class="check__box"></span>
+							Корзина</label></li>
+					</ul>
+					<a class="button show-us" href="">показать</a>
+				</div>
 			</div>
-			<div class="aside-check">
-				<p class="grid">сетка:</p>
-				<ul class="wrapper radio">
-					<li><label class="check option">
-						<input class="check__input" type="radio" name="answer" value="adapt" checked>
-						<span class="radio__box"></span>
-						Адаптивная</label></li>
-					<li><label class="check option">
-						<input class="check__input" type="radio" name="answer" value="fiks">
-						<span class="radio__box"></span>
-						Фиксированная</label></li>
-					<li><label class="check option">
-						<input class="check__input" type="radio" name="answer" value="rubber">
-						<span class="radio__box"></span>
-						Резиновая</label></li>
-				</ul>
-				<p class="features">особенности:</p>
-				<ul class="wrapper checkbox">
-					<li><label class="check option">
-						<input class="check__input" type="checkbox" checked>
-						<span class="check__box"></span>
-						Слайдер</label></li>
-					<li><label class="check option">
-						<input class="check__input" type="checkbox">
-						<span class="check__box"></span>
-						Блок преимуществ</label></li>
-					<li><label class="check option">
-						<input class="check__input" type="checkbox" checked>
-						<span class="check__box"></span>
-						Новости</label></li>
-					<li><label class="check option">
-						<input class="check__input" type="checkbox">
-						<span class="check__box"></span>
-						Галерея</label></li>
-					<li><label class="check option">
-						<input class="check__input" type="checkbox">
-						<span class="check__box"></span>
-						Корзина</label></li>
-				</ul>
-			</div>
-		  <a class="button show-us" href="">показать</a>
-		  <ul class="image-stand"> 
-				<li><img src="img/img-sedona 1.jpg" width="359" height="578" alt="шаблон Седона">
-					<div class="description">
-						<p class="brand-name">sedona</p>
-						<p class="inf-site">Информационный сайт<br>для туристов</p>
-						<a class="button" href="">9900 р</a></li>
+			<div class="catalog-wrapper">
+				<div class="catalog-sorting">
+					<p class="sort">сортировать:</p>
+					<ul class="sort-wrapper">
+						<li>по цене</li>
+						<li>по типу</li>
+						<li>по названию</li>
+					</ul>
+					<div class="sorting-updown">
+						<a class="sorting-down" href="#"></a>
+						<a class="sorting-up" href="#"></a>
 					</div>
-				<li><img src="img/img-pink 1.jpg" width="358" height="578" alt="шаблон пинк"> 
-					<div class="description">
-						<p class="brand-name">pink app</p>
-						<p class="inf-site">Продуктовый лендинг<br>приложения для iOS и Android</p>
-						<a class="button" href="">9900 р</a></li>
-					</div>
-				<li><img src="img/img-barbershop 1.jpg" width="358" height="578" alt="шаблон барбершопа">
-					<div class="description">
-						<p class="brand-name">barbershop</p>
-						<p class="inf-site">Сайт салона красоты.<br>Для мужчин, да.</p>
-						<a class="button" href="">9900 р</a></li>
-					</div>
-				<li><img src="img/img-mishka 1.jpg" width="359" height="578" alt="шаблон мишка"> 
-					<div class="description">
-						<p class="brand-name">mishka</p>
-						<p class="inf-site">Интернет-магазин <br>вязаных игрушек</p>
-						<a class="button" href="">9900 р</a></li>
-					</div>
-				<li><img src="img/img-aplus 1.jpg" width="359" height="578" alt="шаблон аплус"> 
-					<div class="description">
-						<p class="brand-name">a plus</p>
-						<p class="inf-site">Лендинг курсов повышения<br>квалификации</p>
-						<a class="button" href="">9900 р</a></li>
-					</div>
-				<li><img src="img/img-kvast 1.jpg" width="359" height="578" alt="шаблон кваст"> 
-					<div class="description">
-						<p class="brand-name">кваст</p>
-						<p class="inf-site">Промо-сайт производителя<br>крафтового кваса</p>
-						<a class="button" href="">9900 р</a></li>
-					</div>
-			</ul>
-			<div class="pagination">
-				<a class="pagination button" href="">1</a>
-				<a class="pagination button" href="">2</a>
-				<a class="pagination button" href="">3</a>
-				<a class="pagination button next" href="">следующая</a>
+				</div>
+				<div class="catalog-list">
+					<ul class="image-stand"> 
+						<li>
+							<img src="img/img-sedona 1.jpg" width="359" height="578" alt="шаблон Седона">
+							<div class="description">
+								<p class="brand-name">sedona</p>
+								<p class="inf-site">Информационный сайт<br>для туристов</p>
+								<a class="button" href="">9900 р</a>
+							</div>
+						</li>
+						<li>
+							<img src="img/img-pink 1.jpg" width="358" height="578" alt="шаблон пинк"> 
+							<div class="description">
+								<p class="brand-name">pink app</p>
+								<p class="inf-site">Продуктовый лендинг<br>приложения для iOS и Android</p>
+								<a class="button" href="">9900 р</a>
+							</div>
+						</li>
+						<li>
+							<img src="img/img-barbershop 1.jpg" width="358" height="578" alt="шаблон барбершопа">
+							<div class="description">
+								<p class="brand-name">barbershop</p>
+								<p class="inf-site">Сайт салона красоты.<br>Для мужчин, да.</p>
+								<a class="button" href="">9900 р</a>
+							</div>
+						</li>
+						<li>
+							<img src="img/img-mishka 1.jpg" width="359" height="578" alt="шаблон мишка"> 
+							<div class="description">
+								<p class="brand-name">mishka</p>
+								<p class="inf-site">Интернет-магазин <br>вязаных игрушек</p>
+								<a class="button" href="">9900 р</a>
+							</div>
+						</li>
+						<li>
+							<img src="img/img-aplus 1.jpg" width="359" height="578" alt="шаблон аплус"> 
+							<div class="description">
+								<p class="brand-name">a plus</p>
+								<p class="inf-site">Лендинг курсов повышения<br>квалификации</p>
+								<a class="button" href="">9900 р</a>
+							</div>
+						</li>
+						<li>
+							<img src="img/img-kvast 1.jpg" width="359" height="578" alt="шаблон кваст"> 
+							<div class="description">
+								<p class="brand-name">кваст</p>
+								<p class="inf-site">Промо-сайт производителя<br>крафтового кваса</p>
+								<a class="button" href="">9900 р</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="pagination">
+					<a class="pagination button" href="">1</a>
+					<a class="pagination button" href="">2</a>
+					<a class="pagination button" href="">3</a>
+					<a class="pagination button next" href="">следующая</a>
+				</div>
 			</div>
 	  </main>
 	  <footer class="main-footer">

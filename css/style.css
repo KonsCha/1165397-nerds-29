@@ -148,6 +148,10 @@ a {
   padding: 0 23px;
 }
 
+.active {
+  border: 2px solid;
+}
+
 /*Login Link */
 
 .basket {
@@ -176,8 +180,15 @@ a {
   background-color: var(--light-grey);
 }
 
-.about-us h1 {
-  display: none;
+.vissualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
 }
 
 .preview {
@@ -395,9 +406,6 @@ a {
   justify-content:space-between;
 }
 
-.about h2 {
-  display: none;
-}
 .about-part1 {
   display: flex;
   flex-direction: column;
@@ -486,14 +494,11 @@ a {
 
 /*Companies*/
 
-.companies h2 {
-  display: none;
-}
-
 .companies-logo{
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  
   margin: 121px 183px 126px 172px;
   list-style: none;
 }
@@ -554,6 +559,11 @@ a {
 }
 
 /* Social */
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .footer-content {
   display: flex;
@@ -609,12 +619,43 @@ a {
   margin-bottom: 70px;
 }
 
-
-
-
-
-
 /* For catalog */
+
+/* Grid */
+
+.container-catalog {
+  display: grid;
+  grid-template-columns: 330px 826px;
+}
+
+.catalog-filter {
+ 
+}
+
+.catalog-wrapper {
+
+}
+
+.catalog-sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.sort-wrapper {
+  display: flex;
+}
+
+.image-stand {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap:30px ;
+}
+
+.pagination {
+
+}
+
+
 
 .container-catalog {
   color: var(--font-color);
@@ -632,9 +673,8 @@ a {
   padding-bottom: 108px;
 }
 
-.catalog-wrapper {
-  display: flex;
-  justify-content: space-between;
+.wrapper {
+  list-style-type: none;
 }
 
 /* Basic catalog */
@@ -678,6 +718,7 @@ a {
 }
 .filter-item {
   border: none;
+  padding: 0;
 }
 
 .range-controls {
@@ -751,7 +792,6 @@ a {
 /* Sort */
 
 .sort-wrapper {
-  display: flex;
   list-style: none;
   color: var(--basic-black);
   font-weight: 400;
@@ -817,27 +857,15 @@ a {
   fill:#231f20
 }
 
-.aside-check {
-  
-}
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
 
 /* Image */
 
 .image-stand {
-  display: grid;
-  grid-template-columns:min-content min-content ;
-  justify-content: center;
-  align-content: start;
-  column-gap: 42px;
-  row-gap: 30px;
-  margin-top: -400px;
-  margin-right: -500px;
   list-style: none;
+}
+
+.image-stand li {
+  position: relative;
   z-index: 5;
 }
 
@@ -861,11 +889,11 @@ a {
 .description {
   text-align: center;
   background-color: var(--light-grey);
-  padding: 26px 96px 44px 97px;
+  padding: 26px 75px 90px 75px;
   z-index: 10;
-  position: relative;
-  top:-240px;
-  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+
 }
 /* ????сотояние наведения и появления описания */
 
@@ -883,8 +911,6 @@ a {
 
 .pagination {
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
   margin-bottom: 60px;
 }
 
