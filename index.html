@@ -168,7 +168,7 @@
 			</p>
 			<a class="button write-us" href="">напишите нам</a>
 		</section>
-		<section class="footer-social">
+		<section class="footer-social container">
 			<div class="footer-content">
 				<ul class="social-list">
 					<li>
@@ -196,6 +196,27 @@
 			</div>
 		</section>
 	</footer>
+	<section class="modal vissualy-hidden">
+		<h2>Напишите нам</h2>
+		<form action="https://echo.htmlacademy.ru" method="post">
+			<div class="modal-wrapper">
+				<p class="send-name">
+					<label for="send-name">Ваше имя:</label> 
+					<input id="send-name" type="text" name="send-name" value="Имя Фамилия">
+				</p>
+				<p class="send-email">
+					<label for="send-email">Ваше email:</label> 
+					<input id="send-email" type="text" name="send-email" value="email@example.com">
+				</p>
+			</div>
+			<p class="send-text">
+				<label for="send-text">Текст письма:</label> 
+				<input id="send-text" type="text" name="send-text" value="В свободной форме">
+			</p>
+			<button type="submit" class="button send-form-button">Отправить</button>
+		</form>
+		<button class="modal-close" type="button" aria-label="Закрыть"></button>
+	</section>
 </body>
 
 </html>
