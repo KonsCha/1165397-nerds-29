@@ -696,7 +696,7 @@ iframe {
   font-size: 45px;
   line-height: 53px;
   margin: 0;
-  margin-top: 63px;
+  margin-top: 51px;
   margin-bottom: 37px;
 }
 
@@ -730,6 +730,10 @@ iframe {
   color:#444444;
 }
 
+.send-text input[value="В свободной форме"], .send-name input[value="Имя Фамилия"], .send-email input[value="email@example.com"] {
+  opacity: 0.5;
+}
+
 .send-name {
   display: flex;
   flex-direction: column;
@@ -757,7 +761,7 @@ iframe {
 
 .modal-close {
   position: absolute;
-  top: 78px;
+  top: 66px;
   right: 90px;
   width: 21px;
   height: 21px;
@@ -770,20 +774,12 @@ iframe {
 .modal-close::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 2px;
+  top: 0px;
+  left: 0px;
   width: 21px;
-  height: 3px;
-  background-color: var(--light-red);
+  height: 21px;
+  background-image: url(../img/close-cross.svg);
 }
-.modal-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-close::after {
-  transform: rotate(-45deg);
-}
-
 
 /* For catalog */
 
