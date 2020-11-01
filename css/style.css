@@ -356,7 +356,7 @@ a {
 .button.write-us {
   display: inline-block;
   padding: 15px 43px;
-  margin-top: 3px;
+  margin-top: 2px;
   margin-left: 3px;
 }
 
@@ -567,45 +567,34 @@ a {
 .companies {
   border-top: 2px solid #EEEEEE;
   border-bottom: 2px solid #EEEEEE;
-  width: 1158px;
   padding-top: 46px;
   padding-bottom: 33px;
 }
 
 .companies-logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 4px;
+  margin-top: 3px;
+  padding-right: 33px;
+  padding-left: 35px;
 }
 
 .companies-logo li {
-  opacity: 0.2;
-  position: relative;
   width: 210px;
+  text-align: center;
+  margin-right: 95px;
+  position: relative;
 }
 
-.companies-logo li:nth-child(1) {
-  margin-left: 20px;
+.companies-logo img {
+  opacity: 0.2;
 }
 
-.companies-logo li:nth-child(2) {
-  margin-right: 24px;
-}
-
-.companies-logo li:nth-child(4) {
-  margin-left: 8px;
-}
-
-.companies-logo li:nth-child(3) {
-  margin-right: 2px;
-}
-
-.companies-logo.li:nth-last-child() {
-  margin-left: 40px;
+.companies-logo li:last-child {
+  margin-right: 0;
 }
 
 .companies-logo li::after {
@@ -616,25 +605,20 @@ a {
   margin-bottom: auto;
   bottom: 0;
   top: -20px;
-  right: -42px;
+  right: -45px;
   content: '';
   background-color: #eeeeee;
-  opacity: 1;
-}
-
-.companies-logo li:hover::after {
-  opacity: 1;
 }
 
 .companies-logo li:last-child::after {
   display: none;
 }
 
-.companies-logo li:hover {
+.companies-logo img:hover {
   opacity: 1;
 }
 
-.companies-logo li:active {
+.companies-logo img:active {
   opacity: 0.1;
 }
 
